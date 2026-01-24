@@ -2,7 +2,7 @@
 
 public interface IBaseRepository<T> where T : class
 {
-  //Ici on fait le contrat pour le crud de base
+  //le crud de base
   
   Task<IEnumerable<T>> GetAllAsync();
   Task<T?> GetByIdAsync(Guid id);

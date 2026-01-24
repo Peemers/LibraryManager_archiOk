@@ -7,7 +7,7 @@ namespace LibraryManager.Core.Services.Data;
 
 public class LivreService(ILivreRepository livreRepository) : ILivreService
 {
-  public async Task<Livre> Create(Livre livre)
+  public async Task<Livre> CreateAsync(Livre livre)
   {
     if (livre.Auteur == null || livre.Nom == null)
     {
@@ -25,13 +25,13 @@ public class LivreService(ILivreRepository livreRepository) : ILivreService
     return livreCree;
   }
 
-  public async Task<Livre> Update(Guid id, Livre livre)
+  public async Task<Livre> UpdateAsync(Guid id, Livre livre)
   {
     await livreRepository.UpdateAsync(livre);
     return livre;
   }
 
-  public async Task Delete(Guid id)
+  public async Task DeleteAsync(Guid id)
   {
     var existingLivre = await livreRepository.ExistsAsync(id);
     if (!existingLivre) throw new KeyNotFoundException($"Livre {id} not found");
@@ -48,12 +48,12 @@ public class LivreService(ILivreRepository livreRepository) : ILivreService
     return disponibles;
   }
 
-  public async Task<IEnumerable<Livre>> GetAll()
+  public async Task<IEnumerable<Livre>> GetAllAsync()
   {
     return await livreRepository.GetAllAsync();
   }
 
-  public async Task<Livre?> GetById(Guid id)
+  public async Task<Livre?> GetByIdAsync(Guid id)
   {
     return await livreRepository.GetByIdAsync(id);
   }
