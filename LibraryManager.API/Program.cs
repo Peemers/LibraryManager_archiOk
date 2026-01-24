@@ -59,9 +59,9 @@ builder.Services.AddDbContext<LibraryManagerContext>(options =>
 
 // Injection de dépendance
 builder.Services.AddScoped<ILivreRepository, LivreRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<ITodoRepository, TodoRepository>();
-builder.Services.AddScoped<ITodoService, TodoService>();
+//builder.Services.AddScoped<IUserService, UserService>();
+//builder.Services.AddScoped<ITodoRepository, TodoRepository>();
+//builder.Services.AddScoped<ITodoService, TodoService>();
 //builder.Services.AddScoped<IAuthService, AuthService>();
 //builder.Services.AddScoped<IPasswordHasherService, PasswordHasherService>();
 
@@ -71,11 +71,11 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-    app.MapScalarApiReference();
-}
+// if (app.Environment.IsDevelopment())
+// {
+//     app.MapOpenApi();
+//     app.MapScalarApiReference();
+// }
 
 
 app.UseHttpsRedirection();
