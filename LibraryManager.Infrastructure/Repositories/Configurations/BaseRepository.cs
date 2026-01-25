@@ -18,7 +18,6 @@ public class BaseRepository<T>(LibraryManagerContext _context) : IBaseRepository
   public async Task DeleteAsync(Guid id)
   {
     var entity = await _entities.FindAsync(id);
-    if (entity != null)
     {
       _entities.Remove(entity);
       await _context.SaveChangesAsync();

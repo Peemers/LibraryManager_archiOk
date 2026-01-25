@@ -16,7 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controlers\" />
       <Folder Include="DTOs\Requests\" />
       <Folder Include="DTOs\Responces\" />
       <Folder Include="Mappers\" />

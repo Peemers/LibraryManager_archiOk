@@ -7,28 +7,31 @@ namespace LibraryManager.Core.Services.Data;
 
 public class BaseService<T>(IBaseRepository<T> baseRepository) : IBaseService<T> where T : class
 {
-  public virtual Task<IEnumerable<T>> GetAllAsync()
+  public virtual async Task<IEnumerable<T>> GetAllAsync()
   {
-    return baseRepository.GetAllAsync();
+    return await baseRepository.GetAllAsync();
   }
 
-  public virtual Task<T?> GetByIdAsync(Guid id)
+  public virtual async Task<T?> GetByIdAsync(Guid id)
   {
-    return baseRepository.GetByIdAsync(id);
+    return await baseRepository.GetByIdAsync(id);
   }
 
-  public virtual Task DeleteAsync(Guid id)
+  public virtual async Task DeleteAsync(Guid id)
   {
-    return baseRepository.DeleteAsync(id);
+    var livres = await baseRepository.GetByIdAsync(id) ?? throw new DirectoryNotFoundException("livre not found");
+
+    await baseRepository.DeleteAsync(id);
   }
 
-  public virtual Task<T> UpdateAsync(Guid id, T livre)
+
+  public virtual async Task<T> UpdateAsync(Guid id, T livre)
   {
-    return UpdateAsync(id, livre);
+    return await UpdateAsync(id, livre);
   }
 
-  public virtual Task<T> CreateAsync(T livre)
+  public virtual async Task<T> CreateAsync(T livre)
   {
-    return CreateAsync(livre);
+    return await CreateAsync(livre);
   }
 }
