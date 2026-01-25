@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-//using Scalar.AspNetCore;
+using Scalar.AspNetCore;
 using System.Text.Json;
 using LibraryManager.Infrastructure.DataBase;
 using LibraryManager.Core.Interfaces.Repositories;
@@ -71,11 +71,11 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// if (app.Environment.IsDevelopment())
-// {
-//     app.MapOpenApi();
-//     app.MapScalarApiReference();
-// }
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.MapScalarApiReference();
+}
 
 
 app.UseHttpsRedirection();
