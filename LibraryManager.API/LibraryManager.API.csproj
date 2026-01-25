@@ -16,11 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="DTOs\Requests\" />
-      <Folder Include="Mappers\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\LibraryManager.Core\LibraryManager.Core.csproj" />
       <ProjectReference Include="..\LibraryManager.Infrastructure\LibraryManager.Infrastructure.csproj" />
     </ItemGroup>

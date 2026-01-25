@@ -1,4 +1,4 @@
-﻿namespace LibraryManager.API.DTOs.Responces;
+﻿namespace LibraryManager.Core.DTOs.Responces;
 
 public class LivreResponceDto
 {
