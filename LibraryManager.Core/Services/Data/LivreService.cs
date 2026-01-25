@@ -3,6 +3,8 @@ using LibraryManager.Core.Interfaces.Services;
 using LibraryManager.Domain.Entities;
 using LibraryManager.Domain.Enums;
 using System.Linq;
+using LibraryManager.Core.DTOs.Requests;
+using LibraryManager.Core.Mappers;
 
 namespace LibraryManager.Core.Services.Data;
 
@@ -19,6 +21,15 @@ public class LivreService(ILivreRepository livreRepository)
   {
     var livres = await base.GetAllAsync();
     return livres.Where(l => l.StatutLivre == LivreStatut.Disponible);
+  }
+
+  public async Task<Livre> CreateFromDtoAsync(LivreRequestDTO dto)
+  {
+    if (string.IsNullOrWhiteSpace(dto.Nom) || string.IsNullOrWhiteSpace(dto.Auteur))
+      throw new ArgumentException("Données invalides");
+
+    var livres = dto.ToEntity();
+    return await this.CreateAsync(livres);
   }
 
   public override async Task<Livre> CreateAsync(Livre livre)

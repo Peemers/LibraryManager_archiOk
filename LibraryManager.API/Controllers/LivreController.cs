@@ -2,6 +2,7 @@
 using LibraryManager.Core.DTOs.Responces;
 using LibraryManager.Core.Interfaces.Repositories;
 using LibraryManager.Core.Interfaces.Services;
+using LibraryManager.Core.Mappers;
 using LibraryManager.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -29,12 +30,14 @@ public class LivreController : ControllerBase
   [HttpPost]
   public async Task<IActionResult> PostLivre(LivreRequestDTO dto)
   {
-    var livreId = await _livreService.CreateAsync(dto);
+    // On appelle la méthode que l'on a créée spécifiquement pour les DTOs
+    var livreCree = await _livreService.CreateFromDtoAsync(dto);
 
+    // On renvoie un DTO de réponse, pas l'entité brute
     return CreatedAtAction(
       nameof(GetById),
-      new { id = livreId },
-      null
+      new { id = livreCree.Id },
+      livreCree.ToResponseDto()
     );
   }
   [HttpGet("{id}")]
