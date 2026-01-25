@@ -1,0 +1,12 @@
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\bin\Debug\net10.0\LibraryManager.Domain.deps.json
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\bin\Debug\net10.0\LibraryManager.Domain.dll
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\bin\Debug\net10.0\LibraryManager.Domain.pdb
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\obj\Debug\net10.0\LibraryManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\obj\Debug\net10.0\LibraryManager.Domain.AssemblyInfoInputs.cache
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\obj\Debug\net10.0\LibraryManager.Domain.AssemblyInfo.cs
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\obj\Debug\net10.0\LibraryManager.Domain.csproj.CoreCompileInputs.cache
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\obj\Debug\net10.0\LibraryManager.Domain.sourcelink.json
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\obj\Debug\net10.0\LibraryManager.Domain.dll
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\obj\Debug\net10.0\refint\LibraryManager.Domain.dll
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\obj\Debug\net10.0\LibraryManager.Domain.pdb
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Domain\obj\Debug\net10.0\ref\LibraryManager.Domain.dll

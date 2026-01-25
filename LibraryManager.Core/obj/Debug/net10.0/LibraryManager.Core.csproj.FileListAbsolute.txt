@@ -1,0 +1,16 @@
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\bin\Debug\net10.0\LibraryManager.Core.deps.json
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\bin\Debug\net10.0\LibraryManager.Core.dll
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\bin\Debug\net10.0\LibraryManager.Core.pdb
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\bin\Debug\net10.0\LibraryManager.Domain.dll
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\bin\Debug\net10.0\LibraryManager.Domain.pdb
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\LibraryManager.Core.csproj.AssemblyReference.cache
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\LibraryManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\LibraryManager.Core.AssemblyInfoInputs.cache
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\LibraryManager.Core.AssemblyInfo.cs
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\LibraryManager.Core.csproj.CoreCompileInputs.cache
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\LibraryManager.Core.sourcelink.json
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\LibraryM.9282F109.Up2Date
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\LibraryManager.Core.dll
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\refint\LibraryManager.Core.dll
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\LibraryManager.Core.pdb
+S:\dev135j\c#_oo\repo\LibraryManager\LibraryManager\LibraryManager.Core\obj\Debug\net10.0\ref\LibraryManager.Core.dll

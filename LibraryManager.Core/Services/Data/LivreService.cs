@@ -20,4 +20,17 @@ public class LivreService(ILivreRepository livreRepository)
     var livres = await base.GetAllAsync();
     return livres.Where(l => l.StatutLivre == LivreStatut.Disponible);
   }
+
+  public override async Task<Livre> CreateAsync(Livre livre)
+  {
+    if (string.IsNullOrWhiteSpace(livre.Nom) || string.IsNullOrWhiteSpace(livre.Auteur))
+    {
+      throw new ArgumentException("Le nom et l'auteur sont obligatoires pour référencer un livre.");
+    }
+
+    livre.Id = Guid.NewGuid();
+    livre.StatutLivre = LivreStatut.Disponible;
+
+    return await base.CreateAsync(livre);
+  }
 }

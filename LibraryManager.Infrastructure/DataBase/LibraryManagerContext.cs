@@ -5,17 +5,12 @@ namespace LibraryManager.Infrastructure.DataBase;
 
 public class LibraryManagerContext : DbContext
 {
-  public LibraryManagerContext(DbContextOptions options) : base(options)
+  public LibraryManagerContext(DbContextOptions<LibraryManagerContext> options)
+    : base(options)
   {
-    
   }
 
-  protected LibraryManagerContext()
-  {
-    
-  }
-  
-  public DbSet<Livre> Livres { get; set; }
+  public DbSet<Livre> Livres { get; set; } = null!;
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
