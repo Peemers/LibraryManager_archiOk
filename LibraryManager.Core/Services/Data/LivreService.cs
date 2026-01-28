@@ -11,17 +11,28 @@ namespace LibraryManager.Core.Services.Data;
 public class LivreService(ILivreRepository livreRepository)
   : BaseService<Livre>(livreRepository), ILivreService
 {
+  #region GetAllAsync
+
   public override async Task<IEnumerable<Livre>> GetAllAsync()
   {
     var livres = await base.GetAllAsync();
     return livres.OrderBy(l => l.Nom).ToList();
   }
 
+  #endregion
+  
+  #region GetLivreDispoAsync
+
   public async Task<IEnumerable<Livre>> GetLivreDispoAsync()
   {
     var livres = await base.GetAllAsync();
     return livres.Where(l => l.StatutLivre == LivreStatut.Disponible);
   }
+
+  #endregion
+  
+  #region ChangeStatutAsync
+
   public async Task<Livre?> ChangeStatutAsync(Guid livreId, LivreStatut nouveauStatut)
   {
     var livre = await base.GetByIdAsync(livreId);
@@ -39,6 +50,10 @@ public class LivreService(ILivreRepository livreRepository)
     return livre;
   }
 
+  #endregion
+  
+  #region CreateFromDtoAsync
+
   public async Task<Livre> CreateFromDtoAsync(LivreRequestDTO dto)
   {
     if (string.IsNullOrWhiteSpace(dto.Nom) || string.IsNullOrWhiteSpace(dto.Auteur))
@@ -47,6 +62,10 @@ public class LivreService(ILivreRepository livreRepository)
     var livres = dto.ToEntity();
     return await this.CreateAsync(livres);
   }
+
+  #endregion
+  
+  #region CreateAsync
 
   public override async Task<Livre> CreateAsync(Livre livre)
   {
@@ -60,4 +79,7 @@ public class LivreService(ILivreRepository livreRepository)
 
     return await base.CreateAsync(livre);
   }
+
+  #endregion
+  
 }
