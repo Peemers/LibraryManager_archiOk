@@ -1,4 +1,5 @@
-﻿using LibraryManager.Core.DTOs.Requests;
+﻿using System.Text.RegularExpressions;
+using LibraryManager.Core.DTOs.Requests;
 using LibraryManager.Core.DTOs.Requests.UserRequest;
 using LibraryManager.Core.Interfaces.Repositories;
 using LibraryManager.Core.Interfaces.Services;
@@ -55,5 +56,27 @@ public class UserService(IUserRepository userRepository) : BaseService<User>(use
       users.Role = role;
     }
     return users;
+  }
+  public async Task<User> UpdateEmailAsync(Guid userId, string nouveauEmail)
+  {
+    if (string.IsNullOrWhiteSpace(nouveauEmail))
+      throw new ArgumentException("L'email ne peut pas être vide.");
+
+    if (!Regex.IsMatch(nouveauEmail, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+      throw new ArgumentException("Format d'email invalide.");
+
+    var user = await GetByIdAsync(userId);
+    if (user == null)
+      throw new Exception("Utilisateur introuvable.");
+
+    var existingUser = await GetByEmailAsync(nouveauEmail);
+    if (existingUser != null && existingUser.Id != userId)
+      throw new ArgumentException("Cet email est déjà utilisé.");
+
+    user.Email = nouveauEmail;
+
+    await UpdateAsync(user);
+
+    return user;
   }
 }

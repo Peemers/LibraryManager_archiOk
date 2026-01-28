@@ -55,20 +55,12 @@ public class UserController : ControllerBase
     }
   }
   [HttpPut("{id}/email")]
-  public async Task<ActionResult<UserResponceDto>> UpdateEmail(Guid id, [FromBody] UpdateEmailDto? nouveauEmail)
-  //frombody : 
+  public async Task<ActionResult<UserResponceDto>> UpdateEmail(Guid id, [FromBody] UpdateEmailDto? dto)
   {
-    if (nouveauEmail == null || string.IsNullOrEmpty(nouveauEmail.Email))
+    if (dto == null || string.IsNullOrWhiteSpace(dto.Email))
       return BadRequest("L'email ne peut pas être vide.");
 
-    var user = await _userService.GetByIdAsync(id);
-    if (user == null)
-      return NotFound();
-
-    user.Email = nouveauEmail.Email;
-
-    await _userService.UpdateAsync(user);
-
+    var user = await _userService.UpdateEmailAsync(id, dto.Email);
     return Ok(user.ToResponseDto());
   }
 }
