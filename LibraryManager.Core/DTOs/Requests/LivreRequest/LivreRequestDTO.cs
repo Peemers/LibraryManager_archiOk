@@ -1,6 +1,6 @@
 ﻿using LibraryManager.Domain.Enums;
 
-namespace LibraryManager.Core.DTOs.Requests;
+namespace LibraryManager.Core.DTOs.Requests.LivreRequest;
 
 public class LivreRequestDTO
 {

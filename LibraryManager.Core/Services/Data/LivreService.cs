@@ -4,6 +4,7 @@ using LibraryManager.Domain.Entities;
 using LibraryManager.Domain.Enums;
 using System.Linq;
 using LibraryManager.Core.DTOs.Requests;
+using LibraryManager.Core.DTOs.Requests.LivreRequest;
 using LibraryManager.Core.Mappers;
 
 namespace LibraryManager.Core.Services.Data;

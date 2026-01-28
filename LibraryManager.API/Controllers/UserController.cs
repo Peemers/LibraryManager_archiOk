@@ -1,4 +1,5 @@
 ﻿using LibraryManager.Core.DTOs.Responces;
+using LibraryManager.Core.DTOs.Responces.UserResponse;
 using LibraryManager.Core.Interfaces.Services;
 using LibraryManager.Core.Mappers;
 using Microsoft.AspNetCore.Mvc;

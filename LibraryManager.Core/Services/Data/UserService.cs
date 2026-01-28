@@ -1,4 +1,5 @@
 ﻿using LibraryManager.Core.DTOs.Requests;
+using LibraryManager.Core.DTOs.Requests.UserRequest;
 using LibraryManager.Core.Interfaces.Repositories;
 using LibraryManager.Core.Interfaces.Services;
 using LibraryManager.Core.Mappers;

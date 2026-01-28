@@ -1,4 +1,4 @@
-﻿namespace LibraryManager.Core.DTOs.Responces;
+﻿namespace LibraryManager.Core.DTOs.Responces.UserResponse;
 
 public class UserResponceDto
 {

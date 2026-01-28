@@ -1,5 +1,7 @@
 ﻿using LibraryManager.Core.DTOs.Requests;
+using LibraryManager.Core.DTOs.Requests.UserRequest;
 using LibraryManager.Core.DTOs.Responces;
+using LibraryManager.Core.DTOs.Responces.UserResponse;
 using LibraryManager.Domain.Entities;
 
 namespace LibraryManager.Core.Mappers;

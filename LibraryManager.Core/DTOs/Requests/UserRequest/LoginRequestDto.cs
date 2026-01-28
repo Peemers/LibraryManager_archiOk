@@ -1,4 +1,4 @@
-﻿namespace LibraryManager.Core.DTOs.Requests;
+﻿namespace LibraryManager.Core.DTOs.Requests.UserRequest;
 
 public class LoginRequestDto
 {

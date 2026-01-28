@@ -1,5 +1,7 @@
 ﻿using LibraryManager.Core.DTOs.Requests;
+using LibraryManager.Core.DTOs.Requests.LivreRequest;
 using LibraryManager.Core.DTOs.Responces;
+using LibraryManager.Core.DTOs.Responces.LivreResponse;
 using LibraryManager.Domain.Entities;
 using LibraryManager.Domain.Enums;
 
@@ -25,7 +27,6 @@ public static class LivreMapper
       Id = entity.Id,
       Nom = entity.Nom,
       Auteur = entity.Auteur,
-      
     };
   }
 }
