@@ -35,10 +35,11 @@ public class BaseRepository<T>(LibraryManagerContext _context) : IBaseRepository
     return await _entities.FindAsync(id);
   }
 
-  public async Task UpdateAsync(T entity)
+  public async Task<T> UpdateAsync(T entity)
   {
     _entities.Update(entity);
     await _context.SaveChangesAsync();
+    return entity;
   }
 
   public async Task<bool> ExistsAsync(Guid id)

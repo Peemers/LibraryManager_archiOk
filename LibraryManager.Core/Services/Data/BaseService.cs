@@ -27,11 +27,11 @@ public class BaseService<T>(IBaseRepository<T> baseRepository) : IBaseService<T>
 
   public virtual async Task<T> UpdateAsync(T livre)
   {
-    return await UpdateAsync(livre);
+    return await baseRepository.UpdateAsync(livre);
   }
 
   public virtual async Task<T> CreateAsync(T livre)
   {
-    return await CreateAsync(livre);
+    return await baseRepository.AddAsync(livre);
   }
 }

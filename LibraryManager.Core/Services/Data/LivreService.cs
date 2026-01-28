@@ -57,8 +57,15 @@ public class LivreService(ILivreRepository livreRepository)
 
   public async Task<Livre> CreateFromDtoAsync(LivreRequestDTO dto)
   {
-    if (string.IsNullOrWhiteSpace(dto.Nom) || string.IsNullOrWhiteSpace(dto.Auteur))
-      throw new ArgumentException("Données invalides");
+    if (string.IsNullOrWhiteSpace(dto.Nom))
+    {
+      throw new ArgumentException("Pas d'espace pour nom");
+    }
+
+    if (string.IsNullOrWhiteSpace(dto.Auteur))
+    {
+      throw new ArgumentException("Pas d'espace pour auteur");
+    }
 
     var livres = dto.ToEntity();
     return await this.CreateAsync(livres);
