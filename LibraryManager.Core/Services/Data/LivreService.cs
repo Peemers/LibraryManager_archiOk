@@ -22,6 +22,22 @@ public class LivreService(ILivreRepository livreRepository)
     var livres = await base.GetAllAsync();
     return livres.Where(l => l.StatutLivre == LivreStatut.Disponible);
   }
+  public async Task<Livre?> ChangeStatutAsync(Guid livreId, LivreStatut nouveauStatut)
+  {
+    var livre = await base.GetByIdAsync(livreId);
+
+    if (livre == null)
+      throw new Exception("Livre introuvable");
+
+    if (livre.StatutLivre == nouveauStatut)
+      return livre;
+
+    livre.StatutLivre = nouveauStatut;
+
+    await base.UpdateAsync(livre);
+
+    return livre;
+  }
 
   public async Task<Livre> CreateFromDtoAsync(LivreRequestDTO dto)
   {

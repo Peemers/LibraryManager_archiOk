@@ -25,9 +25,9 @@ public class BaseService<T>(IBaseRepository<T> baseRepository) : IBaseService<T>
   }
 
 
-  public virtual async Task<T> UpdateAsync(Guid id, T livre)
+  public virtual async Task<T> UpdateAsync(T livre)
   {
-    return await UpdateAsync(id, livre);
+    return await UpdateAsync(livre);
   }
 
   public virtual async Task<T> CreateAsync(T livre)
