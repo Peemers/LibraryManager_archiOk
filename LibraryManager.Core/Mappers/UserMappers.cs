@@ -7,6 +7,10 @@ public static class UserMappers
 {
   public static User ToEntity(this RegisterRequestDto dto)
   {
-    
+    return new User
+    {
+      Email = dto.Email,
+      PasswordHash = dto.PasswordHash,
+    };
   }
 }
